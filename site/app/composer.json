@@ -1,0 +1,18 @@
+{
+  "name": "app",
+  "type": "silverstripe-project",
+  "description": "Vue hydration demo",
+  "homepage": "https://vuehydrationdemo.tbdev.xyz",
+  "authors": [
+    {
+      "name": "Lemon8",
+      "homepage": "https://lemon8.nl"
+    }
+  ],
+
+  "extra": {
+    "expose": [
+      "images"
+    ]
+  }
+}

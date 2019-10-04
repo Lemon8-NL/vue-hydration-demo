@@ -1,0 +1,24 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pontano+Sans&display=swap');
+
+// Font Awesome config & base font
+@import "font-awesome-config"; // config settings
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+// Bootstrap config
+@import "bootstrap-config";
+
+// Bootstrap Core
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/grid";
+
+// Bootstrap Components
+@import "~bootstrap/scss/vendor/rfs";
+
+// Custom Components
+@import "includes/header";
+
+

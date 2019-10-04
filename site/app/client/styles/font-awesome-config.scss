@@ -1,0 +1,43 @@
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import "font-awesome-variables";
+@import '~@fortawesome/fontawesome-free/scss/mixins';
+@import '~@fortawesome/fontawesome-free/scss/core';
+
+// you can pick and choose the features you actually need:
+//@import '~@fortawesome/fontawesome-free/scss/larger';
+//@import '~@fortawesome/fontawesome-free/scss/fixed-width';
+//@import '~@fortawesome/fontawesome-free/scss/list';
+//@import '~@fortawesome/fontawesome-free/scss/bordered-pulled';
+//@import '~@fortawesome/fontawesome-free/scss/animated';
+//@import '~@fortawesome/fontawesome-free/scss/rotated-flipped';
+//@import '~@fortawesome/fontawesome-free/scss/stacked';
+//@import '~@fortawesome/fontawesome-free/scss/screen-reader';
+
+// the fonts itself, perhaps you only need "solid"
+//@import '~@fortawesome/fontawesome-free/scss/regular';
+//@import '~@fortawesome/fontawesome-free/scss/solid';
+//@import '~@fortawesome/fontawesome-free/scss/brands';
+
+// list only the icons we use, so only those are included in the bundle (keeps bundle sizes small)
+// add your icons here
+$used-icons: (
+        check: $fa-var-check,
+        chevron-left: $fa-var-chevron-left,
+        chevron-right: $fa-var-chevron-right,
+        chevron-down: $fa-var-chevron-down,
+        chevron-up: $fa-var-chevron-up,
+        envelope: $fa-var-envelope,
+        facebook-f: $fa-var-facebook-f,
+        twitter: $fa-var-twitter,
+        linkedin: $fa-var-linkedin,
+        info-circle: $fa-var-info-circle,
+        window-close: $fa-var-window-close,
+        sliders-h: $fa-var-sliders-h,
+        minus-circle: $fa-var-minus-circle
+);
+
+@each $name, $content in $used-icons {
+  .#{$fa-css-prefix}-#{$name}:before {
+    content: fa-content($content);
+  }
+}

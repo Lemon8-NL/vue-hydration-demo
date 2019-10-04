@@ -1,0 +1,29 @@
+{
+    "name": "defaultsite/docroot",
+    "minimum-stability": "stable",
+    "require": {
+        "silverstripe/recipe-plugin": "^1.0",
+        "silverstripe/recipe-cms": "^4.3"
+    },
+    "extra": {
+        "project-files-installed": [
+            ".htaccess",
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+// Bootstrap config
+@import "bootstrap-config";
+
+.employee-carousel .VueCarousel-slide { max-height: 400px !important; height: auto; }
+
+@include media-breakpoint-up(md) {
+  .employee-carousel .VueCarousel-slide { max-height: 350px !important; }
+}

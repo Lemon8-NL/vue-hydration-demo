@@ -1,0 +1,17 @@
+/.idea
+/.settings
+/.vagrant/
+/site/composer.lock
+/site/app/client/package-lock.json
+/site/app/client/node_modules/
+/site/app/client/report.html
+/site/app/src/npm-debug.log
+/site/public/assets/
+/site/public/resources/
+/site/silverstripe-cache/
+/site/ss-error.log
+/site/vendor/
+/other/private
+/other/pma-upload
+/other/logs
+/other/config/*.new
