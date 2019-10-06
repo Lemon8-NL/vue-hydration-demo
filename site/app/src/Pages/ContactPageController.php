@@ -8,7 +8,7 @@ class ContactPageController extends PageController
 
     protected function init() {
         parent::init();
-        Requirements::css('resources/app/css/contactpage.css');
-        Requirements::javascript('resources/app/js/contactpage.bundle.js');
+        //Requirements::css('resources/app/css/contactpage.css');
+        //Requirements::javascript('resources/app/js/contactpage.bundle.js');
     }
 }

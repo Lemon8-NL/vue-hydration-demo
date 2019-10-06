@@ -8,7 +8,7 @@ class AboutUsPageController extends PageController
 
     protected function init() {
         parent::init();
-        Requirements::css('resources/app/css/aboutuspage.css');
-        Requirements::javascript('resources/app/js/aboutuspage.bundle.js');
+        //Requirements::css('resources/app/css/aboutuspage.css');
+        //Requirements::javascript('resources/app/js/aboutuspage.bundle.js');
     }
 }

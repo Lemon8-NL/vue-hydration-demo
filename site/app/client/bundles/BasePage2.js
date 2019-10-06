@@ -5,6 +5,9 @@ import '../styles/basepage.scss';
 import Vue from 'vue'; //we need to import Vue here as we need to import some Vue components
 import 'lazysizes';
 
+import PortalVue from 'portal-vue';
+Vue.use(PortalVue);
+
 import { NavbarPlugin } from 'bootstrap-vue/src/components/navbar';
 // add these generic components as components to our Vue instance
 [NavbarPlugin].forEach((x) => Vue.use(x));
@@ -30,12 +33,25 @@ Vue.component("DesktopComponent", () =>
 Vue.component("MobileComponent", () =>
     import(/* webpackChunkName: "chunk-mobile-component" */'./vue-components/mobile-component.vue')
         .then(component => { console.log('mobile component loaded'); return component; }));
-/*
 
+Vue.component("ImportantInputComponent", () =>
+    import(/* webpackChunkName: "chunk-important-input-component" */'./vue-components/important-input-component.vue')
+        .then(component => { console.log('important-input component loaded'); return component; }));
+
+
+/* ---- PAGE COMPONENTS ---- */
 Vue.component("PageHomepageComponent", () =>
-    import(/!* webpackChunkName: "chunk-page-homepage-component" *!/'./vue-components/page-homepage-component.vue')
+    import(/* webpackChunkName: "chunk-page-homepage-component" */'./vue-components/page-homepage-component.vue')
         .then(component => { console.log('page-homepage component loaded'); return component; }));
-*/
+
+Vue.component("PageAboutuspageComponent", () =>
+    import(/* webpackChunkName: "chunk-page-aboutuspage-component" */'./vue-components/page-aboutuspage-component.vue')
+        .then(component => { console.log('page-aboutuspage component loaded'); return component; }));
+
+Vue.component("PageContactpageComponent", () =>
+    import(/* webpackChunkName: "chunk-page-contactpage-component" */'./vue-components/page-contactpage-component.vue')
+        .then(component => { console.log('page-contactpage component loaded'); return component; }));
+
 
 
 // You can also apply a mixin globally. Use with caution! Once you apply a mixin globally,
@@ -55,5 +71,5 @@ Vue.mixin({
 var vueApp = new Vue({
     el: '#vueapp'
 });
-// we don't instantiate a Vue instance here, since we're only supposed to have 1 Vue instance per page
+
 console.log('-----------------loaded base bundle--------------');

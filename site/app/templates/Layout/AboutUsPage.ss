@@ -65,3 +65,5 @@
         </div>
     </div>
 </div>
+
+<page-aboutuspage-component></page-aboutuspage-component>

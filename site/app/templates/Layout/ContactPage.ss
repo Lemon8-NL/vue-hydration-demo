@@ -17,7 +17,7 @@
                 $Content
 
                 <p>
-                    <b-form-input list="my-list-id"></b-form-input>
+                    <b-form-input name="DummyInput" placeholder="Bootstrap vue input"></b-form-input>
 
                     <b-button variant="primary" class="mt-4">Primary</b-button>
                 </p>
@@ -25,3 +25,4 @@
         </div>
     </div>
 </div>
+<page-contactpage-component></page-contactpage-component>
