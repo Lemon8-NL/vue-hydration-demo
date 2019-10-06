@@ -34,35 +34,22 @@ class Employee extends DataObject
         'EmailAddress'
     ];
 
-    private static $translate = [
-        'JobTitle'
-    ];
-
-    public function fieldLabels($includerelations = true)
-    {
-        $labels = parent::fieldLabels($includerelations);
-        $labels['Thumbnail'] = _t(__CLASS__.'._ProfilePhoto', 'Profile photo');
-        $labels['FullName'] = _t(__CLASS__.'._FullName', 'Full name');
-        $labels['JobTitle'] = _t(__CLASS__.'._JobTitle', 'Job title');
-        $labels['EmailAddress'] = _t(__CLASS__.'._EmailAddress', 'E-mail address');
-        return $labels;
-    }
 
     public function getThumbnail()
     {
         if($this->ProfilePhoto()->exists()) {
             return $this->ProfilePhoto()->ScaleWidth(100);
         }
-        return _t(__CLASS__.'.NOPHOTO', 'No photo');
+        return 'No photo';
     }
 
     public function getCMSFields()
     {
         $fields = FieldList::create(
-            $uploader = UploadField::create('ProfilePhoto', _t(__CLASS__.'._ProfilePhoto', 'Profile photo')),
-            TextField::create('FullName', _t(__CLASS__.'._FullName', 'Full name')),
-            TextField::create('JobTitle', _t(__CLASS__.'._JobTitle', 'Job title')),
-            TextField::create('EmailAddress', _t(__CLASS__.'._EmailAddress', 'E-mail address'))
+            $uploader = UploadField::create('ProfilePhoto', 'Profile photo'),
+            TextField::create('FullName', 'Full name'),
+            TextField::create('JobTitle', 'Job title'),
+            TextField::create('EmailAddress', 'E-mail address')
         );
         $uploader->setFolderName('profile-photos');
         $uploader->getValidator()->setAllowedExtensions(['png', 'gif', 'jpeg', 'jpg']);

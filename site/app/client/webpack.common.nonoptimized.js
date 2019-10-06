@@ -2,18 +2,14 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require('vue-loader');
-const FontminPlugin = require('fontmin-webpack');
 
 
 module.exports = {
     entry: {
-        //aboutuspage: './bundles/AboutUsPage1.js',
-        //contentpage: './bundles/ContentPage1.js',
-        aboutuspage: './bundles/AboutUsPage2.js',
-        contentpage: './bundles/ContentPage2.js',
-        contactpage: './bundles/ContactPage2.js',
-        homepage: './bundles/HomePage2.js',
-        main: './bundles/BasePage2.js',
+        aboutuspage: './bundles/AboutUsPage1.js',
+        contentpage: './bundles/ContentPage1.js',
+        contactpage: './bundles/ContactPage1.js',
+        homepage: './bundles/HomePage1.js',
     },
     output: {
         path: path.resolve('../../public/resources/app'),
@@ -104,7 +100,7 @@ module.exports = {
             // This indicates which chunks will be selected for optimization. When a string is provided, valid
             // values are all, async, and initial. Providing all can be particularly powerful, because it means
             // that chunks can be shared even between async and non-async chunks.
-            chunks: 'all',
+            chunks: 'initial',
             minSize: 0,
             maxSize: 0,
             minChunks: 6,
@@ -125,10 +121,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
             chunkFilename: "css/[name].css",
-        }),
-        //removes all unused parts of the font-awesome font files
-        new FontminPlugin({
-            autodetect: true, // automatically pull unicode characters from CSS
         })
     ]
 };

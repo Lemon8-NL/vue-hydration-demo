@@ -1,6 +1,5 @@
 <?php
 
-
 use SilverStripe\View\Requirements;
 
 class AboutUsPageController extends PageController
@@ -9,7 +8,7 @@ class AboutUsPageController extends PageController
 
     protected function init() {
         parent::init();
-        Requirements::css('resources/directlease/css/aboutuspage.css');
-        Requirements::javascript('resources/directlease/js/aboutuspage.bundle.js');
+        Requirements::css('resources/app/css/aboutuspage.css');
+        Requirements::javascript('resources/app/js/aboutuspage.bundle.js');
     }
 }

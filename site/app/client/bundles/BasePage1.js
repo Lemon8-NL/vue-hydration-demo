@@ -9,5 +9,7 @@ import 'lazysizes';
 // add these generic components as components to our Vue instance
 [NavbarPlugin].forEach((x) => Vue.use(x));
 
+Vue.component("VueCarouselComponent", './vue-components/vue-carousel-component.vue');
+
 // we don't instantiate a Vue instance here, since we're only supposed to have 1 Vue instance per page
 console.log('-----------------loaded base bundle--------------');
