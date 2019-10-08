@@ -49,5 +49,3 @@
         </div>
     </div>
 </div>
-
-<page-homepage-component></page-homepage-component>

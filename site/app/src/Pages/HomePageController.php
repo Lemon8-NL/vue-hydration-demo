@@ -8,7 +8,7 @@ class HomePageController extends PageController
 
     protected function init() {
         parent::init();
-        //Requirements::css('resources/app/css/homepage.css');
-        //Requirements::javascript('resources/app/js/homepage.bundle.js');
+        Requirements::css('resources/app/css/homepage.css');
+        Requirements::javascript('resources/app/js/homepage.bundle.js');
     }
 }

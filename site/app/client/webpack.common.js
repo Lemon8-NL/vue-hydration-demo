@@ -7,13 +7,11 @@ const FontminPlugin = require('fontmin-webpack');
 
 module.exports = {
     entry: {
-        //aboutuspage: './bundles/AboutUsPage1.js',
-        //contentpage: './bundles/ContentPage1.js',
-        aboutuspage: './bundles/AboutUsPage2.js',
-        contentpage: './bundles/ContentPage2.js',
-        contactpage: './bundles/ContactPage2.js',
-        homepage: './bundles/HomePage2.js',
-        main: './bundles/BasePage2.js',
+        aboutuspage: './bundles/AboutUs.js',
+        contentpage: './bundles/Content.js',
+        contactpage: './bundles/Contact.js',
+        homepage: './bundles/Home.js',
+        main: './bundles/Main.js',
     },
     output: {
         path: path.resolve('../../public/resources/app'),

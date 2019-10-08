@@ -34,25 +34,6 @@ Vue.component("MobileComponent", () =>
     import(/* webpackChunkName: "chunk-mobile-component" */'./vue-components/mobile-component.vue')
         .then(component => { console.log('mobile component loaded'); return component; }));
 
-Vue.component("ImportantInputComponent", () =>
-    import(/* webpackChunkName: "chunk-important-input-component" */'./vue-components/important-input-component.vue')
-        .then(component => { console.log('important-input component loaded'); return component; }));
-
-
-/* ---- PAGE COMPONENTS ---- */
-Vue.component("PageHomepageComponent", () =>
-    import(/* webpackChunkName: "chunk-page-homepage-component" */'./vue-components/page-homepage-component.vue')
-        .then(component => { console.log('page-homepage component loaded'); return component; }));
-
-Vue.component("PageAboutuspageComponent", () =>
-    import(/* webpackChunkName: "chunk-page-aboutuspage-component" */'./vue-components/page-aboutuspage-component.vue')
-        .then(component => { console.log('page-aboutuspage component loaded'); return component; }));
-
-Vue.component("PageContactpageComponent", () =>
-    import(/* webpackChunkName: "chunk-page-contactpage-component" */'./vue-components/page-contactpage-component.vue')
-        .then(component => { console.log('page-contactpage component loaded'); return component; }));
-
-
 
 // You can also apply a mixin globally. Use with caution! Once you apply a mixin globally,
 // it will affect every Vue instance created afterwards. Here we created functions to use globally.

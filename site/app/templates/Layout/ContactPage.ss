@@ -25,4 +25,3 @@
         </div>
     </div>
 </div>
-<page-contactpage-component></page-contactpage-component>

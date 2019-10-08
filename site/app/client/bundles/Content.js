@@ -1,4 +1,4 @@
-import './BasePage2.js';
+import './Main.js';
 import '../styles/contentpage.scss';// include the css for this page
 
 import Vue from 'vue';
