@@ -4,7 +4,7 @@ import PortalVue from 'portal-vue';
 Vue.use(PortalVue);
 
 import Vue from 'vue';
-var vueApp = new Vue({
+new Vue({
     el: '#vueapp'
 });
 console.log('-----------------loaded homepage bundle--------------');

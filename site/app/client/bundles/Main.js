@@ -48,9 +48,4 @@ Vue.mixin({
     }
 });
 
-
-var vueApp = new Vue({
-    el: '#vueapp'
-});
-
 console.log('-----------------loaded base bundle--------------');
