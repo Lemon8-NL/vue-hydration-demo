@@ -11,7 +11,7 @@ module.exports = {
         contentpage: './bundles/Content.js',
         contactpage: './bundles/Contact.js',
         homepage: './bundles/Home.js',
-        main: './bundles/Main.js',
+        main: './bundles/Main.js'
     },
     output: {
         path: path.resolve('../../public/resources/app'),
