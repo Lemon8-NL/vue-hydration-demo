@@ -35,13 +35,13 @@
                 --%>
                 <portal to="portal-content">$Content</portal>
 
-                <%-- isMobile calls our Vue mixin from BasePage to see if we are on mobile or dekstop --%>
+                <%-- isMobile calls our Vue mixin from BasePage to see if we are on mobile or desktop --%>
                 <div v-if="!isMobile()">
-                    <%-- The desktop version of the component (it has the included content in one column, and both the questions & customer content in a second column) --%>
+                    <%-- The desktop version of the component --%>
                     <desktop-component></desktop-component>
                 </div>
                 <div v-else>
-                    <%-- The mobile version of the component (it has the included, questions & customer content three separate foldouts) --%>
+                    <%-- The mobile version of the component --%>
                     <mobile-component></mobile-component>
                 </div>
 
