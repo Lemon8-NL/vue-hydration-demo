@@ -2,7 +2,7 @@
 
 	<div class="row">
 		<div class="col-12">
-			<h4>Dekstop component</h4>
+			<h4>Desktop component</h4>
 			<portal-target name="portal-content"></portal-target>
 		</div>
 	</div>

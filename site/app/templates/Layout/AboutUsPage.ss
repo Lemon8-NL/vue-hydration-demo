@@ -33,7 +33,7 @@
             <p>$Block2Content</p>
         </div>
 
-        <vue-carousel-component class="employee-carousel" reference="homepagebanners" :pagination-enabled="false" :navigation-enabled="true" :autoplay-hover-pause="false" :autoplay="true" :per-page="1" :per-page-custom="[[700, 2], [768, 3], [1200, 4]]">
+        <vue-carousel-component class="employee-carousel" reference="employees" :pagination-enabled="false" :navigation-enabled="true" :autoplay-hover-pause="false" :autoplay="true" :per-page="1" :per-page-custom="[[700, 2], [768, 3], [1200, 4]]">
             <% loop $Employees %>
             <template slot="items">
                 <div class="text-center px-5 px-lg-4">
