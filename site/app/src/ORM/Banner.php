@@ -10,7 +10,7 @@ use SilverStripe\Assets\Image;
  * Class Banner
  * These are homepage banners, displayed in the carousel at the top of the homepage
  *
- * @package directlease
+ * @package app
  */
 class Banner extends DataObject
 {

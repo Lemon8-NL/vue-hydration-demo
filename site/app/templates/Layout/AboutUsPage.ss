@@ -39,7 +39,7 @@
                 <div class="text-center px-5 px-lg-4">
                     <img data-srcset="$ProfilePhoto.Fill(500,500).URL 500w,
                                         $ProfilePhoto.Fill(800,800).URL 800w"
-                         sizes="(max-width: 768px) 90vw, (max-width: 1400px) 30vw, 20vw" alt="DirectLease $FullName"
+                         sizes="(max-width: 768px) 90vw, (max-width: 1400px) 30vw, 20vw" alt="$FullName"
                          class="w-75 img-fluid my-4 lazyload" />
                     <h5>$FullName</h5>
                     <p><a href="mailto:$EmailAddress"><i class="fas fa-envelope" aria-hidden="true"></i> $EmailAddress</a></p>
