@@ -5,34 +5,45 @@ import '../styles/basepage.scss';
 import Vue from 'vue'; //we need to import Vue here as we need to import some Vue components
 import 'lazysizes';
 
-import PortalVue from 'portal-vue';
-Vue.use(PortalVue);
-
+/*
+// method 1 : poor treeshaking on the part of Bootstrap-Vue
 import { NavbarPlugin } from 'bootstrap-vue/src/components/navbar';
-// add these generic components as components to our Vue instance
 [NavbarPlugin].forEach((x) => Vue.use(x));
+*/
 
-Vue.component("VueCarouselComponent", () =>
-    import(/* webpackChunkName: "chunk-vue-carousel-component" */'./vue-components/vue-carousel-component.vue')
-        .then(component => { console.log('VueCarouselComponent loaded'); return component; }));
+/*
 
-Vue.component('BFormInput', (resolve) => {
-    import(/* webpackChunkName: "chunk-b-form-input-component" */'bootstrap-vue/src/components/form-input')
-        .then(({BFormInput}) => { console.log('BFormInput loaded'); resolve(BFormInput); });
-});
+// method 2 : better, but still lots of unnecessary overhead being included
+import BNavbar from 'bootstrap-vue/src/components/navbar';
+import BNavbarNav from 'bootstrap-vue/src/components/navbar/navbar-nav';
+import BNavbarBrand from 'bootstrap-vue/src/components/navbar/navbar-brand';
+import BNavbarToggle from 'bootstrap-vue/src/components/navbar/navbar-toggle';
+import BCollapse from 'bootstrap-vue/src/components/collapse/collapse';
 
-Vue.component('BButton', (resolve) => {
-    import(/* webpackChunkName: "chunk-b-button-component" */'bootstrap-vue/src/components/button')
-        .then(({BButton}) => { console.log('BButton loaded'); resolve(BButton); });
-});
+Vue.component("BNavbar", BNavbar);
+Vue.component("BNavbarNav", BNavbarNav);
+Vue.component("BNavbarBrand", BNavbarBrand);
+Vue.component("BNavbarToggle", BNavbarToggle);
+Vue.component("BCollapse", BCollapse);
+*/
 
-Vue.component("DesktopComponent", () =>
-    import(/* webpackChunkName: "chunk-desktop-component" */'./vue-components/desktop-component.vue')
-        .then(component => { console.log('desktop component loaded'); return component; }));
+// method 3 : dynamic imports
+//Vue.component("BNavbar", (resolve) => { import(/* webpackChunkName: "chunk-b-navbar-component" */ 'bootstrap-vue/src/components/navbar/navbar').then(({BNavbar}) => { console.log('BNavbar loaded'); resolve(BNavbar); }); });
+//Vue.component("BNavbarNav",  (resolve) => { import(/* webpackChunkName: "chunk-b-navbar-nav-component" */ 'bootstrap-vue/src/components/navbar/navbar-nav') .then(({BNavbarNav}) => { console.log('BNavbarNav loaded'); resolve(BNavbarNav); }); });
+//Vue.component("BNavItem",  (resolve) => { import(/* webpackChunkName: "chunk-b-nav-item-component" */ 'bootstrap-vue/src/components/nav/nav-item') .then(({BNavItem}) => { console.log('BNavItem loaded'); resolve(BNavItem); }); });
+//Vue.component("BNavbarBrand",  (resolve) => { import(/* webpackChunkName: "chunk-b-navbar-brand-component" */ 'bootstrap-vue/src/components/navbar/navbar-brand') .then(({BNavbarBrand}) => { console.log('BNavbarBrand loaded'); resolve(BNavbarBrand); }); });
+//Vue.component("BNavbarToggle",  (resolve) => { import(/* webpackChunkName: "chunk-b-navbar-toggle-component" */ 'bootstrap-vue/src/components/navbar/navbar-toggle') .then(({BNavbarToggle}) => { console.log('BNavbarToggle loaded'); resolve(BNavbarToggle); }); });
+//Vue.component("BCollapse",  (resolve) => { import(/* webpackChunkName: "chunk-b-collapse-component" */ 'bootstrap-vue/src/components/collapse/collapse') .then(({BCollapse}) => { console.log('BCollapse loaded'); resolve(BCollapse); }); });
 
-Vue.component("MobileComponent", () =>
-    import(/* webpackChunkName: "chunk-mobile-component" */'./vue-components/mobile-component.vue')
-        .then(component => { console.log('mobile component loaded'); return component; }));
+// method 4 : componentize! KISS
+Vue.component("NavbarComponent", () => import(/* webpackChunkName: "chunk-navbar-component" */ './vue-components/navbar-component.vue').then(component => { console.log('navbar component loaded'); return component; }));
+
+Vue.component('BFormInput', (resolve) => { import(/* webpackChunkName: "chunk-b-form-input-component" */ 'bootstrap-vue/src/components/form-input').then(({BFormInput}) => { console.log('BFormInput loaded'); resolve(BFormInput); }); });
+Vue.component('BButton', (resolve) => { import(/* webpackChunkName: "chunk-b-button-component" */ 'bootstrap-vue/src/components/button').then(({BButton}) => { console.log('BButton loaded'); resolve(BButton); }); });
+
+Vue.component("VueCarouselComponent", () => import(/* webpackChunkName: "chunk-vue-carousel-component" */ './vue-components/vue-carousel-component.vue').then(component => { console.log('vue-carousel component loaded'); return component; }));
+Vue.component("DesktopComponent", () => import(/* webpackChunkName: "chunk-desktop-component" */ './vue-components/desktop-component.vue').then(component => { console.log('desktop component loaded'); return component; }));
+Vue.component("MobileComponent", () => import(/* webpackChunkName: "chunk-mobile-component" */ './vue-components/mobile-component.vue').then(component => { console.log('mobile component loaded'); return component; }));
 
 
 // You can also apply a mixin globally. Use with caution! Once you apply a mixin globally,
@@ -47,5 +58,3 @@ Vue.mixin({
         }
     }
 });
-
-console.log('-----------------loaded base bundle--------------');

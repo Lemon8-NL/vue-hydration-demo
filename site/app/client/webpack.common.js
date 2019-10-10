@@ -73,8 +73,9 @@ module.exports = {
             {
                 test: /\.js$/,
                 // Ensure that your source code files are still in their ES module form
-                // when loaded by Babel to optimize code splitting/bundling
-                exclude: /node_modules/,
+                // when loaded by Babel to optimize code splitting/bundling, but BabelMinifyPlugin
+                // throws an error in production mode if exclude is uncommented: TODO
+                //exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {

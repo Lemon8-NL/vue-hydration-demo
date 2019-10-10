@@ -17,7 +17,7 @@ module.exports = merge(common, {
                         preset: ["default", { discardComments: { removeAll: true } }]
                     }
             }),
-            new BabelMinifyPlugin()
+            new BabelMinifyPlugin({}, { comments: false })
         ]
     }
 });

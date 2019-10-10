@@ -14,7 +14,9 @@
 <body id="top">
 
 <div id="vueapp">
-    <b-navbar toggleable="md" type="dark" variant="dark">
+
+    <%-- For use with method 1,2,3 in main.js  --%>
+    <%-- b-navbar toggleable="md" type="dark" variant="dark">
         <b-navbar-brand href="#">NavBar</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -26,19 +28,17 @@
                 <% end_loop %>
             </b-navbar-nav>
 
-            <!-- Right aligned nav items -->
-            <b-navbar-nav class="ml-auto">
-
-                <b-nav-item-dropdown text="Lang" right>
-                    <b-dropdown-item href="#">EN</b-dropdown-item>
-                    <b-dropdown-item href="#">ES</b-dropdown-item>
-                    <b-dropdown-item href="#">RU</b-dropdown-item>
-                    <b-dropdown-item href="#">FA</b-dropdown-item>
-                </b-nav-item-dropdown>
-
-            </b-navbar-nav>
         </b-collapse>
-    </b-navbar>
+    </b-navbar --%>
+
+    <%-- For use with method 4 in main.js  --%>
+    <navbar-component>
+        <% loop $Menu(1) %>
+        <template slot="links">
+            <a href="$Link" title="$Title" class="nav-link">$MenuTitle</a>
+        </template>
+        <% end_loop %>
+    </navbar-component>
 
     $Layout
 
