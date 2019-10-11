@@ -44,6 +44,8 @@ Vue.component('BButton', (resolve) => { import(/* webpackChunkName: "chunk-b-but
 Vue.component("VueCarouselComponent", () => import(/* webpackChunkName: "chunk-vue-carousel-component" */ './vue-components/vue-carousel-component.vue').then(component => { console.log('vue-carousel component loaded'); return component; }));
 Vue.component("DesktopComponent", () => import(/* webpackChunkName: "chunk-desktop-component" */ './vue-components/desktop-component.vue').then(component => { console.log('desktop component loaded'); return component; }));
 Vue.component("MobileComponent", () => import(/* webpackChunkName: "chunk-mobile-component" */ './vue-components/mobile-component.vue').then(component => { console.log('mobile component loaded'); return component; }));
+Vue.component("ElementTwoColumns", () => import(/* webpackChunkName: "chunk-element-two-columns" */ './vue-components/element-two-columns.vue').then(component => { console.log('two column element loaded'); return component; }));
+Vue.component("ElementContent", () => import(/* webpackChunkName: "chunk-element-content" */ './vue-components/element-content.vue').then(component => { console.log('content element loaded'); return component; }));
 
 
 // You can also apply a mixin globally. Use with caution! Once you apply a mixin globally,

@@ -3,7 +3,9 @@
     "minimum-stability": "stable",
     "require": {
         "silverstripe/recipe-plugin": "^1.0",
-        "silverstripe/recipe-cms": "^4.3"
+        "silverstripe/recipe-cms": "^4.3",
+        "dorsetdigital/silverstripe-http2": "^1.0",
+        "dnadesign/silverstripe-elemental": "^4.2"
     },
     "extra": {
         "project-files-installed": [

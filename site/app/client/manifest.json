@@ -1,0 +1,8 @@
+{
+  "name": "Vue hydration demo",
+  "short_name": "Lemon8",
+  "theme_color": "#008cc8",
+  "background_color": "#008cc8",
+  "display": "standalone",
+  "start_url": "/"
+}

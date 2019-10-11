@@ -15,7 +15,10 @@ namespace {
             Requirements::insertHeadTags('<link rel="preload" href="resources/app/css/common.css" as="style">', 1);
             Requirements::insertHeadTags('<link rel="preload" href="resources/app/js/common.bundle.js" as="script">', 2);
 
-            Requirements::insertHeadTags('<link rel="preload" href="resources/app/js/main.bundle.js" as="script">', 4);
+            Requirements::insertHeadTags('<link rel="preload" href="resources/app/css/chunk-navbar-component.css" as="style">', 3);
+            Requirements::insertHeadTags('<link rel="preload" href="resources/app/js/chunk-navbar-component.bundle.js" as="script">', 4);
+
+            Requirements::insertHeadTags('<link rel="preload" href="resources/app/js/main.bundle.js" as="script">', 5);
 
             Requirements::css('resources/app/css/common.css');
             Requirements::javascript('resources/app/js/common.bundle.js');
