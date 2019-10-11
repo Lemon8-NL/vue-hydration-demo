@@ -1,0 +1,12 @@
+---
+Name: app
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: app
+#Turn on http2
+DorsetDigital\HTTP2\DDMiddleware:
+  enabled: true
+#Elemental
+HomePage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension

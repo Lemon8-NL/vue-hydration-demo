@@ -44,7 +44,8 @@
 
 </div><!-- //vue-app -->
 
-<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<%-- Highly recommended: much preferred over the custom-polyfil-in-webpack-route --%>
+<%-- script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script --%>
 
 <footer>
     <div class="bg-dark mt-5 py-5 text-center text-white">

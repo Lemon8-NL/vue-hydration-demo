@@ -62,7 +62,7 @@
     .VueCarousel-navigation-button { width:3.5rem!important; height:100%; text-indent:-999px; overflow:hidden; }
     .VueCarousel-navigation-button:focus { outline:none!important; }
     .VueCarousel-navigation-button::before { color:$white; float:left; text-indent:0; font-family: 'Font Awesome 5 Free', sans-serif; font-weight: 400; font-size: 20px;
-        opacity:1; background: rgba(0,0,0,.5); height: 2.5rem; width: 2.5rem; line-height: 2.5rem; border-radius: 50%;}
+        opacity:1; background: rgba(0,0,0,.5); height: 3rem; width: 3rem; line-height: 3rem; border-radius: 50%;}
 
     .VueCarousel-navigation-prev { left: 3.5rem!important; margin-left:0!important; }
     .VueCarousel-navigation-prev::before { content: "\f053"; }
