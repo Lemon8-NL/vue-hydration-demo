@@ -12,7 +12,7 @@ import { NavbarPlugin } from 'bootstrap-vue/src/components/navbar';
 */
 
 /*
-// method 2 : better, but still lots of unnecessary overhead being included
+// method 2 : deep imports, better, more control, but still lots of unnecessary overhead being included
 import BNavbar from 'bootstrap-vue/src/components/navbar';
 import BNavbarNav from 'bootstrap-vue/src/components/navbar/navbar-nav';
 import BNavbarBrand from 'bootstrap-vue/src/components/navbar/navbar-brand';
