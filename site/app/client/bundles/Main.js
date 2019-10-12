@@ -12,7 +12,6 @@ import { NavbarPlugin } from 'bootstrap-vue/src/components/navbar';
 */
 
 /*
-
 // method 2 : better, but still lots of unnecessary overhead being included
 import BNavbar from 'bootstrap-vue/src/components/navbar';
 import BNavbarNav from 'bootstrap-vue/src/components/navbar/navbar-nav';
@@ -37,6 +36,9 @@ Vue.component("BCollapse", BCollapse);
 
 // method 4 : componentize! KISS
 Vue.component("NavbarComponent", () => import(/* webpackChunkName: "chunk-navbar-component" */ './vue-components/navbar-component.vue').then(component => { console.log('navbar component loaded'); return component; }));
+
+
+
 
 Vue.component('BFormInput', (resolve) => { import(/* webpackChunkName: "chunk-b-form-input-component" */ 'bootstrap-vue/src/components/form-input').then(({BFormInput}) => { console.log('BFormInput loaded'); resolve(BFormInput); }); });
 Vue.component('BButton', (resolve) => { import(/* webpackChunkName: "chunk-b-button-component" */ 'bootstrap-vue/src/components/button').then(({BButton}) => { console.log('BButton loaded'); resolve(BButton); }); });
